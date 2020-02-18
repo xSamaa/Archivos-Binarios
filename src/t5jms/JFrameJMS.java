@@ -231,12 +231,17 @@ public class JFrameJMS extends javax.swing.JFrame {
                 nombre = dis.readUTF();
                 cantidad = dis.readUTF();
                 descripcion = dis.readUTF();
+                boolean encontrado = false;
                 
                 if (entrada.equals(nombre)) {
                     buscado = codigo + " " + nombre + " " + cantidad + " " + descripcion;
                     txtArea.setText(buscado);
+                    encontrado = true;
                 }
                 codigo = dis.readUTF();
+                if(!encontrado){
+                    txtArea.setText("Producto no encontrado");
+                }
             }
         } catch (EOFException e) {
             System.out.println("Fin de fichero");
