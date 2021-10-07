@@ -1,1 +1,8 @@
+<<<<<<< Updated upstream
 asdewrwer
+=======
+asdewrwerwewewwewew
+
+
+1
+>>>>>>> Stashed changes
